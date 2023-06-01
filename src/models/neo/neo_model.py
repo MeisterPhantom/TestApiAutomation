@@ -9,3 +9,9 @@ class Neo(BaseClient):
     def get_neo_list(self, start_date, end_date):
         return self.apiRequest.get(self.url + "feed?start_date=" + str(start_date)
                                    + "&end_date=" + str(end_date) + "&api_key=" + self.api_key, self.headers)
+
+    def get_neo_lookup(self, asteroid_id):
+        return self.apiRequest.get(self.url + "neo/" + str(asteroid_id) + "?api_key=" + self.api_key, self.headers)
+
+    def get_browse_neo(self):
+        return self.apiRequest.get(self.url + "neo/browse?api_key=" + self.api_key, self.headers)
