@@ -1,6 +1,6 @@
 import pytest
 
-from src.pokemon.pokemon_model import Pokemon
+from src.neo.neo_model import Pokemon
 from src.assertions.assertion import *
 from src.test.schema import *
 
