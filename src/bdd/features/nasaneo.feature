@@ -5,4 +5,4 @@ Feature: Test functional API Neo from NASA
 
   Scenario: Get list objects near earth
     Given the API requires 2022-07-01 and 2022-07-07 data date
-    Then the API status code response es equal to "200"
+    Then the API status code response es equal to 200
