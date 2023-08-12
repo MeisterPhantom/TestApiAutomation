@@ -1,11 +1,10 @@
 from src.models.neo.neo_model import Neo
-from pytest_bdd import scenario, given, when, then
+from pytest_bdd import scenario, given, then
 from pytest_bdd import parsers
 
 neo = Neo()
 
 
-# scenario('../features/nasaneo.feature')
 @scenario('../features/nasaneo.feature', 'Get list objects near earth')
 def test_get_neo_list():
     pass

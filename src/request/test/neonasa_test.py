@@ -27,6 +27,6 @@ def test_get_lookup_neo(asteroid_id):
     assert_status_code(response.status_code, 200)
 
 
-def test_browse_neo():
+def test_get_browse_neo():
     response = neo.get_browse_neo()
     assert_status_code(response.status_code, 200)
