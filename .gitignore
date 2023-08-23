@@ -117,7 +117,7 @@ dmypy.json
 .pyre/
 
 # IDEs project files
-.idea
+/.idea
 .vscode
 rest-client.env.json
 
@@ -128,3 +128,10 @@ Desktop.ini
 # Thumbnails
 ._*
 Thumbs.db
+
+# geckodriver
+geckodriver.log
+
+# pytest report
+report.html
+/assets
