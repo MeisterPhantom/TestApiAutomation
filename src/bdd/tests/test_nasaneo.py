@@ -5,7 +5,7 @@ from pytest_bdd import parsers
 neo = Neo()
 
 
-@scenario('../features/nasaneo.feature', 'Get list objects near earth')
+@scenario('../features/test_nasaneo.feature', 'Get list objects near earth')
 def test_get_neo_list():
     pass
 

@@ -5,7 +5,7 @@ from pytest_bdd import parsers
 neo = Neo()
 
 
-scenarios('../features/nasaneo.feature')
+scenarios('../features/test_nasaneo.feature')
 
 
 @given(

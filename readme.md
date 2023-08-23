@@ -36,5 +36,5 @@ note that the name of the virtual environment appears at the beginning of the co
 
 1 - For execute the test, execute the follow command
 ```
-python -m pytest -n auto ./src/test
+python -m pytest -n auto ./bdd/features
 ```

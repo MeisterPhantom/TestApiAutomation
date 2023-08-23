@@ -7,7 +7,7 @@ Feature: Test functional API Neo from NASA
     Given the API requires 2022-07-01 and 2022-07-07 data date
     Then the API status code response es equal to 200
 
-  Scenario: Get  lookup asteroid near to earth
+  Scenario: Get lookup asteroid near to earth
     Given the API requires 2465633 asteroid id
     Then the API status code response es equal to 200
 

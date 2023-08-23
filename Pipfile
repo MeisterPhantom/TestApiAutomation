@@ -13,6 +13,7 @@ pytest-xdist = "~=2.5.0"
 atomicwrites = "~=1.4.1"
 jsonschema = "~=4.17.1"
 pytest-bdd = "*"
+pytest-html = "*"
 
 [dev-packages]
 pytest = "==7.4.0"
@@ -23,7 +24,8 @@ python-dotenv = "~=0.20.0"
 pytest-xdist = "~=2.5.0"
 atomicwrites = "~=1.4.1"
 jsonschema = "~=4.17.1"
-pytest-bdd = "~=6.1.1"
+pytest-bdd = "*"
+pytest-html = "*"
 
 [requires]
 python_version = "3.8"
