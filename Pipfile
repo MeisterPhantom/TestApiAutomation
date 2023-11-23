@@ -6,12 +6,12 @@ name = "pypi"
 [packages]
 robotframework = "*"
 robotframework-seleniumlibrary = "*"
-webdrivermanager = "*"
+robotframework-requests = "*"
 
 [dev-packages]
 robotframework = "*"
 robotframework-seleniumlibrary = "*"
-webdrivermanager = "*"
+robotframework-requests = "*"
 
 [requires]
 python_version = "3.8"
