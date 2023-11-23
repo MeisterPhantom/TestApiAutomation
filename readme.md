@@ -44,6 +44,7 @@ note that the name of the virtual environment appears at the beginning of the co
 robot -d results tests
 ```
 
+2 - For review the results of the execution tests, [CLICK HERE](./results/report.html)
 ### 4 - Test Plan File ###
 
 You can consult the test plan in the following link: [Test Plan](./PLAN%20DE%20PRUEBAS%20-%20API.pdf)
