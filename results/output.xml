@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.1.1 (Python 3.8.10 on linux)" generated="20231123 05:00:30.486" rpa="false" schemaversion="4">
+<robot generator="Robot 6.1.1 (Python 3.8.10 on linux)" generated="20231123 05:32:41.357" rpa="false" schemaversion="4">
 <suite id="s1" name="Tests" source="/media/meisterphantom/personal/Personales/TestApiAutomation/tests">
 <suite id="s1-s1" name="Users" source="/media/meisterphantom/personal/Personales/TestApiAutomation/tests/users.robot">
 <kw name="Base Api" library="config" type="SETUP">
@@ -7,32 +7,32 @@
 <var>${BASE_URL}</var>
 <arg>${BASE_URL}</arg>
 <doc>Returns the given values which can then be assigned to a variables.</doc>
-<msg timestamp="20231123 05:00:30.632" level="INFO">${BASE_URL} = https://reqres.in/api</msg>
-<status status="PASS" starttime="20231123 05:00:30.631" endtime="20231123 05:00:30.632"/>
+<msg timestamp="20231123 05:32:41.497" level="INFO">${BASE_URL} = https://reqres.in/api</msg>
+<status status="PASS" starttime="20231123 05:32:41.497" endtime="20231123 05:32:41.497"/>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <arg>${BASE_URL}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20231123 05:00:30.632" endtime="20231123 05:00:30.632"/>
+<status status="PASS" starttime="20231123 05:32:41.497" endtime="20231123 05:32:41.497"/>
 </kw>
-<status status="PASS" starttime="20231123 05:00:30.631" endtime="20231123 05:00:30.632"/>
+<status status="PASS" starttime="20231123 05:32:41.497" endtime="20231123 05:32:41.497"/>
 </kw>
 <test id="s1-s1-t1" name="Create User" line="10">
 <kw name="Given The API Is Available" library="resource_users">
 <kw name="Log To Console" library="BuiltIn">
 <arg>Start the request</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20231123 05:00:30.633" endtime="20231123 05:00:30.633"/>
+<status status="PASS" starttime="20231123 05:32:41.498" endtime="20231123 05:32:41.499"/>
 </kw>
-<status status="PASS" starttime="20231123 05:00:30.633" endtime="20231123 05:00:30.633"/>
+<status status="PASS" starttime="20231123 05:32:41.498" endtime="20231123 05:32:41.499"/>
 </kw>
 <kw name="When A POST Request Is Sent To ${BASE_URL}, ${USERS_ENDPOINT} With ${NAME}, ${JOB} Data" library="resource_users" sourcename="A POST Request Is Sent To ${BASE_URL}, ${USERS_ENDPOINT} With ${NAME}, ${JOB} Data">
 <kw name="Set Test Variable" library="BuiltIn">
 <arg>${NAME_REQ}</arg>
 <arg>${NAME}</arg>
 <doc>Makes a variable available everywhere within the scope of the current test.</doc>
-<msg timestamp="20231123 05:00:30.635" level="INFO">${NAME_REQ} = Ivan</msg>
-<status status="PASS" starttime="20231123 05:00:30.634" endtime="20231123 05:00:30.635"/>
+<msg timestamp="20231123 05:32:41.500" level="INFO">${NAME_REQ} = Ivan</msg>
+<status status="PASS" starttime="20231123 05:32:41.499" endtime="20231123 05:32:41.500"/>
 </kw>
 <kw name="Post Request With Json" library="API_requests">
 <var>${RESPONSE}</var>
@@ -45,38 +45,38 @@
 <arg>name=${NAME}</arg>
 <arg>job=${JOB}</arg>
 <doc>Creates and returns a dictionary based on the given ``items``.</doc>
-<msg timestamp="20231123 05:00:30.636" level="INFO">${BODY} = {'name': 'Ivan', 'job': 'Ingeniero'}</msg>
-<status status="PASS" starttime="20231123 05:00:30.635" endtime="20231123 05:00:30.636"/>
+<msg timestamp="20231123 05:32:41.501" level="INFO">${BODY} = {'name': 'Ivan', 'job': 'Ingeniero'}</msg>
+<status status="PASS" starttime="20231123 05:32:41.500" endtime="20231123 05:32:41.501"/>
 </kw>
 <kw name="POST" library="RequestsLibrary">
 <var>${RESPONSE}</var>
 <arg>${URL}${ENDPOINT}</arg>
 <arg>json=${BODY}</arg>
 <doc>Sends a POST request.</doc>
-<msg timestamp="20231123 05:00:31.250" level="INFO">POST Request : url=https://reqres.in/api/users 
+<msg timestamp="20231123 05:32:42.174" level="INFO">POST Request : url=https://reqres.in/api/users 
  path_url=/api/users 
  headers={'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '36', 'Content-Type': 'application/json'} 
  body=b'{"name": "Ivan", "job": "Ingeniero"}' 
  </msg>
-<msg timestamp="20231123 05:00:31.250" level="INFO">POST Response : url=https://reqres.in/api/users 
+<msg timestamp="20231123 05:32:42.175" level="INFO">POST Response : url=https://reqres.in/api/users 
  status=201, reason=Created 
- headers={'Date': 'Thu, 23 Nov 2023 10:00:31 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '83', 'Connection': 'keep-alive', 'Report-To': '{"group":"heroku-nel","max_age":3600,"endpoints":[{"url":"https://nel.heroku.com/reports?ts=1700733631&amp;sid=c4c9725f-1ab0-44d8-820f-430df2718e11&amp;s=fxHkES1gki3ynmZGuDGXvMcID%2FxgM99CF%2FgQF1P8HI0%3D"}]}', 'Reporting-Endpoints': 'heroku-nel=https://nel.heroku.com/reports?ts=1700733631&amp;sid=c4c9725f-1ab0-44d8-820f-430df2718e11&amp;s=fxHkES1gki3ynmZGuDGXvMcID%2FxgM99CF%2FgQF1P8HI0%3D', 'Nel': '{"report_to":"heroku-nel","max_age":3600,"success_fraction":0.005,"failure_fraction":0.05,"response_headers":["Via"]}', 'X-Powered-By': 'Express', 'Access-Control-Allow-Origin': '*', 'Etag': 'W/"53-dZKJSQMWS4PXNco+0CY7kcMIuIA"', 'Via': '1.1 vegur', 'CF-Cache-Status': 'DYNAMIC', 'Server': 'cloudflare', 'CF-RAY': '82a890c9d9bc6da7-MIA'} 
- body={"name":"Ivan","job":"Ingeniero","id":"226","createdAt":"2023-11-23T10:00:31.194Z"} 
+ headers={'Date': 'Thu, 23 Nov 2023 10:32:42 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '83', 'Connection': 'keep-alive', 'Report-To': '{"group":"heroku-nel","max_age":3600,"endpoints":[{"url":"https://nel.heroku.com/reports?ts=1700735562&amp;sid=c4c9725f-1ab0-44d8-820f-430df2718e11&amp;s=ObuqoHmF4X2HWPUxP1juUkICTnYPvH4iriWYx5Nd%2Bz8%3D"}]}', 'Reporting-Endpoints': 'heroku-nel=https://nel.heroku.com/reports?ts=1700735562&amp;sid=c4c9725f-1ab0-44d8-820f-430df2718e11&amp;s=ObuqoHmF4X2HWPUxP1juUkICTnYPvH4iriWYx5Nd%2Bz8%3D', 'Nel': '{"report_to":"heroku-nel","max_age":3600,"success_fraction":0.005,"failure_fraction":0.05,"response_headers":["Via"]}', 'X-Powered-By': 'Express', 'Access-Control-Allow-Origin': '*', 'Etag': 'W/"53-jHOoyj0ux2ro7+LRhwpnsXUEXZY"', 'Via': '1.1 vegur', 'CF-Cache-Status': 'DYNAMIC', 'Server': 'cloudflare', 'CF-RAY': '82a8bfed5f963365-MIA'} 
+ body={"name":"Ivan","job":"Ingeniero","id":"278","createdAt":"2023-11-23T10:32:42.004Z"} 
  </msg>
-<msg timestamp="20231123 05:00:31.250" level="INFO">${RESPONSE} = &lt;Response [201]&gt;</msg>
-<status status="PASS" starttime="20231123 05:00:30.636" endtime="20231123 05:00:31.250"/>
+<msg timestamp="20231123 05:32:42.175" level="INFO">${RESPONSE} = &lt;Response [201]&gt;</msg>
+<status status="PASS" starttime="20231123 05:32:41.501" endtime="20231123 05:32:42.175"/>
 </kw>
-<msg timestamp="20231123 05:00:31.251" level="INFO">${RESPONSE} = &lt;Response [201]&gt;</msg>
-<status status="PASS" starttime="20231123 05:00:30.635" endtime="20231123 05:00:31.251"/>
+<msg timestamp="20231123 05:32:42.175" level="INFO">${RESPONSE} = &lt;Response [201]&gt;</msg>
+<status status="PASS" starttime="20231123 05:32:41.500" endtime="20231123 05:32:42.175"/>
 </kw>
 <kw name="Set Test Variable" library="BuiltIn">
 <arg>${RESPONSE_VAR}</arg>
 <arg>${RESPONSE}</arg>
 <doc>Makes a variable available everywhere within the scope of the current test.</doc>
-<msg timestamp="20231123 05:00:31.253" level="INFO">${RESPONSE_VAR} = &lt;Response [201]&gt;</msg>
-<status status="PASS" starttime="20231123 05:00:31.251" endtime="20231123 05:00:31.253"/>
+<msg timestamp="20231123 05:32:42.178" level="INFO">${RESPONSE_VAR} = &lt;Response [201]&gt;</msg>
+<status status="PASS" starttime="20231123 05:32:42.176" endtime="20231123 05:32:42.178"/>
 </kw>
-<status status="PASS" starttime="20231123 05:00:30.633" endtime="20231123 05:00:31.253"/>
+<status status="PASS" starttime="20231123 05:32:41.499" endtime="20231123 05:32:42.178"/>
 </kw>
 <kw name="Then The Status Code Should Be 201" library="resource_users" sourcename="The Status Code Should Be ${CODE_EXPECTED}">
 <kw name="Verify Status Code" library="API_requests">
@@ -86,14 +86,14 @@
 <arg>${response.status_code}</arg>
 <arg>${expected_status}</arg>
 <doc>Fails if objects are unequal after converting them to real numbers.</doc>
-<msg timestamp="20231123 05:00:31.256" level="INFO">Argument types are:
+<msg timestamp="20231123 05:32:42.181" level="INFO">Argument types are:
 &lt;class 'int'&gt;
 &lt;class 'str'&gt;</msg>
-<status status="PASS" starttime="20231123 05:00:31.255" endtime="20231123 05:00:31.257"/>
+<status status="PASS" starttime="20231123 05:32:42.181" endtime="20231123 05:32:42.181"/>
 </kw>
-<status status="PASS" starttime="20231123 05:00:31.254" endtime="20231123 05:00:31.257"/>
+<status status="PASS" starttime="20231123 05:32:42.180" endtime="20231123 05:32:42.181"/>
 </kw>
-<status status="PASS" starttime="20231123 05:00:31.254" endtime="20231123 05:00:31.257"/>
+<status status="PASS" starttime="20231123 05:32:42.179" endtime="20231123 05:32:42.181"/>
 </kw>
 <kw name="And The Response Contains ${NAME} And ${JOB} Data" library="resource_users" sourcename="The Response Contains ${NAME_R} And ${JOB_R} Data">
 <kw name="Get From Dictionary" library="Collections">
@@ -101,30 +101,30 @@
 <arg>${RESPONSE_VAR.json()}</arg>
 <arg>name</arg>
 <doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
-<msg timestamp="20231123 05:00:31.259" level="INFO">${NAME_R} = Ivan</msg>
-<status status="PASS" starttime="20231123 05:00:31.258" endtime="20231123 05:00:31.260"/>
+<msg timestamp="20231123 05:32:42.182" level="INFO">${NAME_R} = Ivan</msg>
+<status status="PASS" starttime="20231123 05:32:42.182" endtime="20231123 05:32:42.182"/>
 </kw>
 <kw name="Should Be Equal As Strings" library="BuiltIn">
 <arg>${NAME_R}</arg>
 <arg>${NAME_REQ}</arg>
 <doc>Fails if objects are unequal after converting them to strings.</doc>
-<status status="PASS" starttime="20231123 05:00:31.260" endtime="20231123 05:00:31.260"/>
+<status status="PASS" starttime="20231123 05:32:42.182" endtime="20231123 05:32:42.182"/>
 </kw>
 <kw name="Get From Dictionary" library="Collections">
 <var>${JOB_R}</var>
 <arg>${RESPONSE_VAR.json()}</arg>
 <arg>job</arg>
 <doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
-<msg timestamp="20231123 05:00:31.262" level="INFO">${JOB_R} = Ingeniero</msg>
-<status status="PASS" starttime="20231123 05:00:31.261" endtime="20231123 05:00:31.262"/>
+<msg timestamp="20231123 05:32:42.183" level="INFO">${JOB_R} = Ingeniero</msg>
+<status status="PASS" starttime="20231123 05:32:42.183" endtime="20231123 05:32:42.183"/>
 </kw>
 <kw name="Should Be Equal As Strings" library="BuiltIn">
 <arg>${JOB_R}</arg>
 <arg>${JOB}</arg>
 <doc>Fails if objects are unequal after converting them to strings.</doc>
-<status status="PASS" starttime="20231123 05:00:31.262" endtime="20231123 05:00:31.263"/>
+<status status="PASS" starttime="20231123 05:32:42.183" endtime="20231123 05:32:42.183"/>
 </kw>
-<status status="PASS" starttime="20231123 05:00:31.257" endtime="20231123 05:00:31.263"/>
+<status status="PASS" starttime="20231123 05:32:42.181" endtime="20231123 05:32:42.183"/>
 </kw>
 <kw name="And The Id Must Be A Positive Integer" library="resource_users">
 <kw name="Get From Dictionary" library="Collections">
@@ -132,34 +132,34 @@
 <arg>${RESPONSE_VAR.json()}</arg>
 <arg>id</arg>
 <doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
-<msg timestamp="20231123 05:00:31.265" level="INFO">${ID} = 226</msg>
-<status status="PASS" starttime="20231123 05:00:31.264" endtime="20231123 05:00:31.265"/>
+<msg timestamp="20231123 05:32:42.184" level="INFO">${ID} = 278</msg>
+<status status="PASS" starttime="20231123 05:32:42.183" endtime="20231123 05:32:42.184"/>
 </kw>
 <kw name="Should Be True" library="BuiltIn">
 <arg>${ID} &gt; 0</arg>
 <doc>Fails if the given condition is not true.</doc>
-<status status="PASS" starttime="20231123 05:00:31.265" endtime="20231123 05:00:31.265"/>
+<status status="PASS" starttime="20231123 05:32:42.184" endtime="20231123 05:32:42.184"/>
 </kw>
-<status status="PASS" starttime="20231123 05:00:31.263" endtime="20231123 05:00:31.265"/>
+<status status="PASS" starttime="20231123 05:32:42.183" endtime="20231123 05:32:42.184"/>
 </kw>
-<status status="PASS" starttime="20231123 05:00:30.632" endtime="20231123 05:00:31.266"/>
+<status status="PASS" starttime="20231123 05:32:41.498" endtime="20231123 05:32:42.184"/>
 </test>
 <test id="s1-s1-t2" name="Create User With One Data Parameter In Null" line="17">
 <kw name="Given The API Is Available" library="resource_users">
 <kw name="Log To Console" library="BuiltIn">
 <arg>Start the request</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20231123 05:00:31.267" endtime="20231123 05:00:31.267"/>
+<status status="PASS" starttime="20231123 05:32:42.185" endtime="20231123 05:32:42.185"/>
 </kw>
-<status status="PASS" starttime="20231123 05:00:31.267" endtime="20231123 05:00:31.267"/>
+<status status="PASS" starttime="20231123 05:32:42.185" endtime="20231123 05:32:42.186"/>
 </kw>
 <kw name="When A POST Request Is Sent To ${BASE_URL}, ${USERS_ENDPOINT} With ${EMPTY_NAME}, ${JOB} Data" library="resource_users" sourcename="A POST Request Is Sent To ${BASE_URL}, ${USERS_ENDPOINT} With ${NAME}, ${JOB} Data">
 <kw name="Set Test Variable" library="BuiltIn">
 <arg>${NAME_REQ}</arg>
 <arg>${NAME}</arg>
 <doc>Makes a variable available everywhere within the scope of the current test.</doc>
-<msg timestamp="20231123 05:00:31.269" level="INFO">${NAME_REQ} = Null</msg>
-<status status="PASS" starttime="20231123 05:00:31.268" endtime="20231123 05:00:31.269"/>
+<msg timestamp="20231123 05:32:42.187" level="INFO">${NAME_REQ} = Null</msg>
+<status status="PASS" starttime="20231123 05:32:42.186" endtime="20231123 05:32:42.187"/>
 </kw>
 <kw name="Post Request With Json" library="API_requests">
 <var>${RESPONSE}</var>
@@ -172,38 +172,38 @@
 <arg>name=${NAME}</arg>
 <arg>job=${JOB}</arg>
 <doc>Creates and returns a dictionary based on the given ``items``.</doc>
-<msg timestamp="20231123 05:00:31.270" level="INFO">${BODY} = {'name': 'Null', 'job': 'Ingeniero'}</msg>
-<status status="PASS" starttime="20231123 05:00:31.270" endtime="20231123 05:00:31.270"/>
+<msg timestamp="20231123 05:32:42.187" level="INFO">${BODY} = {'name': 'Null', 'job': 'Ingeniero'}</msg>
+<status status="PASS" starttime="20231123 05:32:42.187" endtime="20231123 05:32:42.187"/>
 </kw>
 <kw name="POST" library="RequestsLibrary">
 <var>${RESPONSE}</var>
 <arg>${URL}${ENDPOINT}</arg>
 <arg>json=${BODY}</arg>
 <doc>Sends a POST request.</doc>
-<msg timestamp="20231123 05:00:31.837" level="INFO">POST Request : url=https://reqres.in/api/users 
+<msg timestamp="20231123 05:32:42.687" level="INFO">POST Request : url=https://reqres.in/api/users 
  path_url=/api/users 
  headers={'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '36', 'Content-Type': 'application/json'} 
  body=b'{"name": "Null", "job": "Ingeniero"}' 
  </msg>
-<msg timestamp="20231123 05:00:31.838" level="INFO">POST Response : url=https://reqres.in/api/users 
+<msg timestamp="20231123 05:32:42.687" level="INFO">POST Response : url=https://reqres.in/api/users 
  status=201, reason=Created 
- headers={'Date': 'Thu, 23 Nov 2023 10:00:31 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '83', 'Connection': 'keep-alive', 'Report-To': '{"group":"heroku-nel","max_age":3600,"endpoints":[{"url":"https://nel.heroku.com/reports?ts=1700733631&amp;sid=c4c9725f-1ab0-44d8-820f-430df2718e11&amp;s=fxHkES1gki3ynmZGuDGXvMcID%2FxgM99CF%2FgQF1P8HI0%3D"}]}', 'Reporting-Endpoints': 'heroku-nel=https://nel.heroku.com/reports?ts=1700733631&amp;sid=c4c9725f-1ab0-44d8-820f-430df2718e11&amp;s=fxHkES1gki3ynmZGuDGXvMcID%2FxgM99CF%2FgQF1P8HI0%3D', 'Nel': '{"report_to":"heroku-nel","max_age":3600,"success_fraction":0.005,"failure_fraction":0.05,"response_headers":["Via"]}', 'X-Powered-By': 'Express', 'Access-Control-Allow-Origin': '*', 'Etag': 'W/"53-Zl4IR3KEDIrEmIf62v+SIau6dkg"', 'Via': '1.1 vegur', 'CF-Cache-Status': 'DYNAMIC', 'Server': 'cloudflare', 'CF-RAY': '82a890cd4fb38da3-MIA'} 
- body={"name":"Null","job":"Ingeniero","id":"774","createdAt":"2023-11-23T10:00:31.747Z"} 
+ headers={'Date': 'Thu, 23 Nov 2023 10:32:42 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '83', 'Connection': 'keep-alive', 'Report-To': '{"group":"heroku-nel","max_age":3600,"endpoints":[{"url":"https://nel.heroku.com/reports?ts=1700735562&amp;sid=c4c9725f-1ab0-44d8-820f-430df2718e11&amp;s=ObuqoHmF4X2HWPUxP1juUkICTnYPvH4iriWYx5Nd%2Bz8%3D"}]}', 'Reporting-Endpoints': 'heroku-nel=https://nel.heroku.com/reports?ts=1700735562&amp;sid=c4c9725f-1ab0-44d8-820f-430df2718e11&amp;s=ObuqoHmF4X2HWPUxP1juUkICTnYPvH4iriWYx5Nd%2Bz8%3D', 'Nel': '{"report_to":"heroku-nel","max_age":3600,"success_fraction":0.005,"failure_fraction":0.05,"response_headers":["Via"]}', 'X-Powered-By': 'Express', 'Access-Control-Allow-Origin': '*', 'Etag': 'W/"53-M8YTxoKzOwV93Ez4lwSVIommAT4"', 'Via': '1.1 vegur', 'CF-Cache-Status': 'DYNAMIC', 'Server': 'cloudflare', 'CF-RAY': '82a8bff13aac7420-MIA'} 
+ body={"name":"Null","job":"Ingeniero","id":"505","createdAt":"2023-11-23T10:32:42.617Z"} 
  </msg>
-<msg timestamp="20231123 05:00:31.838" level="INFO">${RESPONSE} = &lt;Response [201]&gt;</msg>
-<status status="PASS" starttime="20231123 05:00:31.270" endtime="20231123 05:00:31.838"/>
+<msg timestamp="20231123 05:32:42.688" level="INFO">${RESPONSE} = &lt;Response [201]&gt;</msg>
+<status status="PASS" starttime="20231123 05:32:42.187" endtime="20231123 05:32:42.688"/>
 </kw>
-<msg timestamp="20231123 05:00:31.838" level="INFO">${RESPONSE} = &lt;Response [201]&gt;</msg>
-<status status="PASS" starttime="20231123 05:00:31.269" endtime="20231123 05:00:31.838"/>
+<msg timestamp="20231123 05:32:42.688" level="INFO">${RESPONSE} = &lt;Response [201]&gt;</msg>
+<status status="PASS" starttime="20231123 05:32:42.187" endtime="20231123 05:32:42.688"/>
 </kw>
 <kw name="Set Test Variable" library="BuiltIn">
 <arg>${RESPONSE_VAR}</arg>
 <arg>${RESPONSE}</arg>
 <doc>Makes a variable available everywhere within the scope of the current test.</doc>
-<msg timestamp="20231123 05:00:31.839" level="INFO">${RESPONSE_VAR} = &lt;Response [201]&gt;</msg>
-<status status="PASS" starttime="20231123 05:00:31.838" endtime="20231123 05:00:31.839"/>
+<msg timestamp="20231123 05:32:42.691" level="INFO">${RESPONSE_VAR} = &lt;Response [201]&gt;</msg>
+<status status="PASS" starttime="20231123 05:32:42.689" endtime="20231123 05:32:42.691"/>
 </kw>
-<status status="PASS" starttime="20231123 05:00:31.268" endtime="20231123 05:00:31.840"/>
+<status status="PASS" starttime="20231123 05:32:42.186" endtime="20231123 05:32:42.691"/>
 </kw>
 <kw name="Then The Status Code Should Be 201" library="resource_users" sourcename="The Status Code Should Be ${CODE_EXPECTED}">
 <kw name="Verify Status Code" library="API_requests">
@@ -213,14 +213,14 @@
 <arg>${response.status_code}</arg>
 <arg>${expected_status}</arg>
 <doc>Fails if objects are unequal after converting them to real numbers.</doc>
-<msg timestamp="20231123 05:00:31.841" level="INFO">Argument types are:
+<msg timestamp="20231123 05:32:42.696" level="INFO">Argument types are:
 &lt;class 'int'&gt;
 &lt;class 'str'&gt;</msg>
-<status status="PASS" starttime="20231123 05:00:31.840" endtime="20231123 05:00:31.841"/>
+<status status="PASS" starttime="20231123 05:32:42.694" endtime="20231123 05:32:42.696"/>
 </kw>
-<status status="PASS" starttime="20231123 05:00:31.840" endtime="20231123 05:00:31.841"/>
+<status status="PASS" starttime="20231123 05:32:42.693" endtime="20231123 05:32:42.696"/>
 </kw>
-<status status="PASS" starttime="20231123 05:00:31.840" endtime="20231123 05:00:31.841"/>
+<status status="PASS" starttime="20231123 05:32:42.692" endtime="20231123 05:32:42.696"/>
 </kw>
 <kw name="And The Response Contains ${EMPTY_NAME} And ${JOB} Data" library="resource_users" sourcename="The Response Contains ${NAME_R} And ${JOB_R} Data">
 <kw name="Get From Dictionary" library="Collections">
@@ -228,30 +228,30 @@
 <arg>${RESPONSE_VAR.json()}</arg>
 <arg>name</arg>
 <doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
-<msg timestamp="20231123 05:00:31.842" level="INFO">${NAME_R} = Null</msg>
-<status status="PASS" starttime="20231123 05:00:31.842" endtime="20231123 05:00:31.842"/>
+<msg timestamp="20231123 05:32:42.699" level="INFO">${NAME_R} = Null</msg>
+<status status="PASS" starttime="20231123 05:32:42.697" endtime="20231123 05:32:42.699"/>
 </kw>
 <kw name="Should Be Equal As Strings" library="BuiltIn">
 <arg>${NAME_R}</arg>
 <arg>${NAME_REQ}</arg>
 <doc>Fails if objects are unequal after converting them to strings.</doc>
-<status status="PASS" starttime="20231123 05:00:31.842" endtime="20231123 05:00:31.842"/>
+<status status="PASS" starttime="20231123 05:32:42.699" endtime="20231123 05:32:42.700"/>
 </kw>
 <kw name="Get From Dictionary" library="Collections">
 <var>${JOB_R}</var>
 <arg>${RESPONSE_VAR.json()}</arg>
 <arg>job</arg>
 <doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
-<msg timestamp="20231123 05:00:31.843" level="INFO">${JOB_R} = Ingeniero</msg>
-<status status="PASS" starttime="20231123 05:00:31.842" endtime="20231123 05:00:31.843"/>
+<msg timestamp="20231123 05:32:42.701" level="INFO">${JOB_R} = Ingeniero</msg>
+<status status="PASS" starttime="20231123 05:32:42.700" endtime="20231123 05:32:42.701"/>
 </kw>
 <kw name="Should Be Equal As Strings" library="BuiltIn">
 <arg>${JOB_R}</arg>
 <arg>${JOB}</arg>
 <doc>Fails if objects are unequal after converting them to strings.</doc>
-<status status="PASS" starttime="20231123 05:00:31.843" endtime="20231123 05:00:31.843"/>
+<status status="PASS" starttime="20231123 05:32:42.701" endtime="20231123 05:32:42.702"/>
 </kw>
-<status status="PASS" starttime="20231123 05:00:31.841" endtime="20231123 05:00:31.843"/>
+<status status="PASS" starttime="20231123 05:32:42.697" endtime="20231123 05:32:42.702"/>
 </kw>
 <kw name="And The Id Must Be A Positive Integer" library="resource_users">
 <kw name="Get From Dictionary" library="Collections">
@@ -259,26 +259,26 @@
 <arg>${RESPONSE_VAR.json()}</arg>
 <arg>id</arg>
 <doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
-<msg timestamp="20231123 05:00:31.844" level="INFO">${ID} = 774</msg>
-<status status="PASS" starttime="20231123 05:00:31.844" endtime="20231123 05:00:31.844"/>
+<msg timestamp="20231123 05:32:42.704" level="INFO">${ID} = 505</msg>
+<status status="PASS" starttime="20231123 05:32:42.703" endtime="20231123 05:32:42.704"/>
 </kw>
 <kw name="Should Be True" library="BuiltIn">
 <arg>${ID} &gt; 0</arg>
 <doc>Fails if the given condition is not true.</doc>
-<status status="PASS" starttime="20231123 05:00:31.845" endtime="20231123 05:00:31.845"/>
+<status status="PASS" starttime="20231123 05:32:42.704" endtime="20231123 05:32:42.704"/>
 </kw>
-<status status="PASS" starttime="20231123 05:00:31.843" endtime="20231123 05:00:31.845"/>
+<status status="PASS" starttime="20231123 05:32:42.702" endtime="20231123 05:32:42.704"/>
 </kw>
-<status status="PASS" starttime="20231123 05:00:31.266" endtime="20231123 05:00:31.845"/>
+<status status="PASS" starttime="20231123 05:32:42.185" endtime="20231123 05:32:42.704"/>
 </test>
 <test id="s1-s1-t3" name="Create User Without Required Parameter" line="24">
 <kw name="Given The API Is Available" library="resource_users">
 <kw name="Log To Console" library="BuiltIn">
 <arg>Start the request</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20231123 05:00:31.846" endtime="20231123 05:00:31.846"/>
+<status status="PASS" starttime="20231123 05:32:42.706" endtime="20231123 05:32:42.706"/>
 </kw>
-<status status="PASS" starttime="20231123 05:00:31.846" endtime="20231123 05:00:31.846"/>
+<status status="PASS" starttime="20231123 05:32:42.706" endtime="20231123 05:32:42.706"/>
 </kw>
 <kw name="When A POST Request Is Sent To ${BASE_URL}, ${USERS_ENDPOINT}, ${JOB} Data" library="resource_users" sourcename="A POST Request Is Sent To ${BASE_URL}, ${USERS_ENDPOINT}, ${JOB} Data">
 <kw name="Post Request With Json And Without Required Parameter" library="API_requests">
@@ -290,38 +290,38 @@
 <var>${BODY}</var>
 <arg>job=${JOB}</arg>
 <doc>Creates and returns a dictionary based on the given ``items``.</doc>
-<msg timestamp="20231123 05:00:31.848" level="INFO">${BODY} = {'job': 'Ingeniero'}</msg>
-<status status="PASS" starttime="20231123 05:00:31.848" endtime="20231123 05:00:31.848"/>
+<msg timestamp="20231123 05:32:42.708" level="INFO">${BODY} = {'job': 'Ingeniero'}</msg>
+<status status="PASS" starttime="20231123 05:32:42.708" endtime="20231123 05:32:42.708"/>
 </kw>
 <kw name="POST" library="RequestsLibrary">
 <var>${RESPONSE}</var>
 <arg>${URL}${ENDPOINT}</arg>
 <arg>json=${BODY}</arg>
 <doc>Sends a POST request.</doc>
-<msg timestamp="20231123 05:00:32.359" level="INFO">POST Request : url=https://reqres.in/api/users 
+<msg timestamp="20231123 05:32:43.214" level="INFO">POST Request : url=https://reqres.in/api/users 
  path_url=/api/users 
  headers={'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '20', 'Content-Type': 'application/json'} 
  body=b'{"job": "Ingeniero"}' 
  </msg>
-<msg timestamp="20231123 05:00:32.359" level="INFO">POST Response : url=https://reqres.in/api/users 
+<msg timestamp="20231123 05:32:43.214" level="INFO">POST Response : url=https://reqres.in/api/users 
  status=201, reason=Created 
- headers={'Date': 'Thu, 23 Nov 2023 10:00:32 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '68', 'Connection': 'keep-alive', 'Report-To': '{"group":"heroku-nel","max_age":3600,"endpoints":[{"url":"https://nel.heroku.com/reports?ts=1700733632&amp;sid=c4c9725f-1ab0-44d8-820f-430df2718e11&amp;s=HjsjIRiBUo0%2F0FzJBSmNLHX5%2B50rtFKYclO3wzZsIFY%3D"}]}', 'Reporting-Endpoints': 'heroku-nel=https://nel.heroku.com/reports?ts=1700733632&amp;sid=c4c9725f-1ab0-44d8-820f-430df2718e11&amp;s=HjsjIRiBUo0%2F0FzJBSmNLHX5%2B50rtFKYclO3wzZsIFY%3D', 'Nel': '{"report_to":"heroku-nel","max_age":3600,"success_fraction":0.005,"failure_fraction":0.05,"response_headers":["Via"]}', 'X-Powered-By': 'Express', 'Access-Control-Allow-Origin': '*', 'Etag': 'W/"44-xr4Ps1lBcRy5qKFwO5HNx3TiR+0"', 'Via': '1.1 vegur', 'CF-Cache-Status': 'DYNAMIC', 'Server': 'cloudflare', 'CF-RAY': '82a890d0baae5c83-MIA'} 
- body={"job":"Ingeniero","id":"80","createdAt":"2023-11-23T10:00:32.334Z"} 
+ headers={'Date': 'Thu, 23 Nov 2023 10:32:43 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '69', 'Connection': 'keep-alive', 'Report-To': '{"group":"heroku-nel","max_age":3600,"endpoints":[{"url":"https://nel.heroku.com/reports?ts=1700735563&amp;sid=c4c9725f-1ab0-44d8-820f-430df2718e11&amp;s=PVeIPgX3lByLt%2FiwAdjm5vmpcuKg4gEyfJDvn8%2FVAIs%3D"}]}', 'Reporting-Endpoints': 'heroku-nel=https://nel.heroku.com/reports?ts=1700735563&amp;sid=c4c9725f-1ab0-44d8-820f-430df2718e11&amp;s=PVeIPgX3lByLt%2FiwAdjm5vmpcuKg4gEyfJDvn8%2FVAIs%3D', 'Nel': '{"report_to":"heroku-nel","max_age":3600,"success_fraction":0.005,"failure_fraction":0.05,"response_headers":["Via"]}', 'X-Powered-By': 'Express', 'Access-Control-Allow-Origin': '*', 'Etag': 'W/"45-xfrzFz6JCfKKy1O35VFd72q4aBY"', 'Via': '1.1 vegur', 'CF-Cache-Status': 'DYNAMIC', 'Server': 'cloudflare', 'CF-RAY': '82a8bff46c508dde-MIA'} 
+ body={"job":"Ingeniero","id":"825","createdAt":"2023-11-23T10:32:43.159Z"} 
  </msg>
-<msg timestamp="20231123 05:00:32.359" level="INFO">${RESPONSE} = &lt;Response [201]&gt;</msg>
-<status status="PASS" starttime="20231123 05:00:31.848" endtime="20231123 05:00:32.359"/>
+<msg timestamp="20231123 05:32:43.215" level="INFO">${RESPONSE} = &lt;Response [201]&gt;</msg>
+<status status="PASS" starttime="20231123 05:32:42.708" endtime="20231123 05:32:43.215"/>
 </kw>
-<msg timestamp="20231123 05:00:32.359" level="INFO">${RESPONSE} = &lt;Response [201]&gt;</msg>
-<status status="PASS" starttime="20231123 05:00:31.847" endtime="20231123 05:00:32.360"/>
+<msg timestamp="20231123 05:32:43.215" level="INFO">${RESPONSE} = &lt;Response [201]&gt;</msg>
+<status status="PASS" starttime="20231123 05:32:42.707" endtime="20231123 05:32:43.215"/>
 </kw>
 <kw name="Set Test Variable" library="BuiltIn">
 <arg>${RESPONSE_VAR}</arg>
 <arg>${RESPONSE}</arg>
 <doc>Makes a variable available everywhere within the scope of the current test.</doc>
-<msg timestamp="20231123 05:00:32.362" level="INFO">${RESPONSE_VAR} = &lt;Response [201]&gt;</msg>
-<status status="PASS" starttime="20231123 05:00:32.360" endtime="20231123 05:00:32.362"/>
+<msg timestamp="20231123 05:32:43.217" level="INFO">${RESPONSE_VAR} = &lt;Response [201]&gt;</msg>
+<status status="PASS" starttime="20231123 05:32:43.215" endtime="20231123 05:32:43.217"/>
 </kw>
-<status status="PASS" starttime="20231123 05:00:31.847" endtime="20231123 05:00:32.362"/>
+<status status="PASS" starttime="20231123 05:32:42.706" endtime="20231123 05:32:43.218"/>
 </kw>
 <kw name="Then The Status Code Should Be 201" library="resource_users" sourcename="The Status Code Should Be ${CODE_EXPECTED}">
 <kw name="Verify Status Code" library="API_requests">
@@ -331,14 +331,14 @@
 <arg>${response.status_code}</arg>
 <arg>${expected_status}</arg>
 <doc>Fails if objects are unequal after converting them to real numbers.</doc>
-<msg timestamp="20231123 05:00:32.366" level="INFO">Argument types are:
+<msg timestamp="20231123 05:32:43.219" level="INFO">Argument types are:
 &lt;class 'int'&gt;
 &lt;class 'str'&gt;</msg>
-<status status="PASS" starttime="20231123 05:00:32.365" endtime="20231123 05:00:32.366"/>
+<status status="PASS" starttime="20231123 05:32:43.219" endtime="20231123 05:32:43.219"/>
 </kw>
-<status status="PASS" starttime="20231123 05:00:32.363" endtime="20231123 05:00:32.366"/>
+<status status="PASS" starttime="20231123 05:32:43.218" endtime="20231123 05:32:43.219"/>
 </kw>
-<status status="PASS" starttime="20231123 05:00:32.363" endtime="20231123 05:00:32.366"/>
+<status status="PASS" starttime="20231123 05:32:43.218" endtime="20231123 05:32:43.219"/>
 </kw>
 <kw name="And The Response Contains ${JOB} Data" library="resource_users" sourcename="The Response Contains ${JOB-R} Data">
 <kw name="Get From Dictionary" library="Collections">
@@ -346,16 +346,16 @@
 <arg>${RESPONSE_VAR.json()}</arg>
 <arg>job</arg>
 <doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
-<msg timestamp="20231123 05:00:32.368" level="INFO">${JOB_R} = Ingeniero</msg>
-<status status="PASS" starttime="20231123 05:00:32.367" endtime="20231123 05:00:32.368"/>
+<msg timestamp="20231123 05:32:43.220" level="INFO">${JOB_R} = Ingeniero</msg>
+<status status="PASS" starttime="20231123 05:32:43.220" endtime="20231123 05:32:43.220"/>
 </kw>
 <kw name="Should Be Equal As Strings" library="BuiltIn">
 <arg>${JOB_R}</arg>
 <arg>${JOB}</arg>
 <doc>Fails if objects are unequal after converting them to strings.</doc>
-<status status="PASS" starttime="20231123 05:00:32.368" endtime="20231123 05:00:32.368"/>
+<status status="PASS" starttime="20231123 05:32:43.220" endtime="20231123 05:32:43.220"/>
 </kw>
-<status status="PASS" starttime="20231123 05:00:32.366" endtime="20231123 05:00:32.368"/>
+<status status="PASS" starttime="20231123 05:32:43.219" endtime="20231123 05:32:43.220"/>
 </kw>
 <kw name="And The Id Must Be A Positive Integer" library="resource_users">
 <kw name="Get From Dictionary" library="Collections">
@@ -363,31 +363,242 @@
 <arg>${RESPONSE_VAR.json()}</arg>
 <arg>id</arg>
 <doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
-<msg timestamp="20231123 05:00:32.369" level="INFO">${ID} = 80</msg>
-<status status="PASS" starttime="20231123 05:00:32.369" endtime="20231123 05:00:32.369"/>
+<msg timestamp="20231123 05:32:43.221" level="INFO">${ID} = 825</msg>
+<status status="PASS" starttime="20231123 05:32:43.221" endtime="20231123 05:32:43.221"/>
 </kw>
 <kw name="Should Be True" library="BuiltIn">
 <arg>${ID} &gt; 0</arg>
 <doc>Fails if the given condition is not true.</doc>
-<status status="PASS" starttime="20231123 05:00:32.370" endtime="20231123 05:00:32.370"/>
+<status status="PASS" starttime="20231123 05:32:43.221" endtime="20231123 05:32:43.222"/>
 </kw>
-<status status="PASS" starttime="20231123 05:00:32.368" endtime="20231123 05:00:32.370"/>
+<status status="PASS" starttime="20231123 05:32:43.221" endtime="20231123 05:32:43.222"/>
 </kw>
-<status status="PASS" starttime="20231123 05:00:31.845" endtime="20231123 05:00:32.370"/>
+<status status="PASS" starttime="20231123 05:32:42.705" endtime="20231123 05:32:43.222"/>
 </test>
-<status status="PASS" starttime="20231123 05:00:30.502" endtime="20231123 05:00:32.371"/>
+<test id="s1-s1-t4" name="Create User With Integer Name" line="31">
+<kw name="Given The API Is Available" library="resource_users">
+<kw name="Log To Console" library="BuiltIn">
+<arg>Start the request</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20231123 05:32:43.223" endtime="20231123 05:32:43.224"/>
+</kw>
+<status status="PASS" starttime="20231123 05:32:43.223" endtime="20231123 05:32:43.224"/>
+</kw>
+<kw name="When A POST Request Is Sent To ${BASE_URL}, ${USERS_ENDPOINT} With ${INTEGER_NAME}, ${JOB} Data" library="resource_users" sourcename="A POST Request Is Sent To ${BASE_URL}, ${USERS_ENDPOINT} With ${NAME}, ${JOB} Data">
+<kw name="Set Test Variable" library="BuiltIn">
+<arg>${NAME_REQ}</arg>
+<arg>${NAME}</arg>
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<msg timestamp="20231123 05:32:43.226" level="INFO">${NAME_REQ} = 1</msg>
+<status status="PASS" starttime="20231123 05:32:43.225" endtime="20231123 05:32:43.226"/>
+</kw>
+<kw name="Post Request With Json" library="API_requests">
+<var>${RESPONSE}</var>
+<arg>${BASE_URL}</arg>
+<arg>${USERS_ENDPOINT}</arg>
+<arg>${NAME}</arg>
+<arg>${JOB}</arg>
+<kw name="Create Dictionary" library="BuiltIn">
+<var>${BODY}</var>
+<arg>name=${NAME}</arg>
+<arg>job=${JOB}</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<msg timestamp="20231123 05:32:43.228" level="INFO">${BODY} = {'name': '1', 'job': 'Ingeniero'}</msg>
+<status status="PASS" starttime="20231123 05:32:43.227" endtime="20231123 05:32:43.228"/>
+</kw>
+<kw name="POST" library="RequestsLibrary">
+<var>${RESPONSE}</var>
+<arg>${URL}${ENDPOINT}</arg>
+<arg>json=${BODY}</arg>
+<doc>Sends a POST request.</doc>
+<msg timestamp="20231123 05:32:44.324" level="INFO">POST Request : url=https://reqres.in/api/users 
+ path_url=/api/users 
+ headers={'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '33', 'Content-Type': 'application/json'} 
+ body=b'{"name": "1", "job": "Ingeniero"}' 
+ </msg>
+<msg timestamp="20231123 05:32:44.324" level="INFO">POST Response : url=https://reqres.in/api/users 
+ status=201, reason=Created 
+ headers={'Date': 'Thu, 23 Nov 2023 10:32:44 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '80', 'Connection': 'keep-alive', 'Report-To': '{"group":"heroku-nel","max_age":3600,"endpoints":[{"url":"https://nel.heroku.com/reports?ts=1700735564&amp;sid=c4c9725f-1ab0-44d8-820f-430df2718e11&amp;s=dX5P4H%2Bwsk%2F%2Fxs6X0dUsFKjqWNTsprzfgb%2BBHY7KN3c%3D"}]}', 'Reporting-Endpoints': 'heroku-nel=https://nel.heroku.com/reports?ts=1700735564&amp;sid=c4c9725f-1ab0-44d8-820f-430df2718e11&amp;s=dX5P4H%2Bwsk%2F%2Fxs6X0dUsFKjqWNTsprzfgb%2BBHY7KN3c%3D', 'Nel': '{"report_to":"heroku-nel","max_age":3600,"success_fraction":0.005,"failure_fraction":0.05,"response_headers":["Via"]}', 'X-Powered-By': 'Express', 'Access-Control-Allow-Origin': '*', 'Etag': 'W/"50-FzRDyv0ZK0AEhg2yDP+t+M0rO74"', 'Via': '1.1 vegur', 'CF-Cache-Status': 'DYNAMIC', 'Server': 'cloudflare', 'CF-RAY': '82a8bffb9ce78dc4-MIA'} 
+ body={"name":"1","job":"Ingeniero","id":"354","createdAt":"2023-11-23T10:32:44.272Z"} 
+ </msg>
+<msg timestamp="20231123 05:32:44.326" level="INFO">${RESPONSE} = &lt;Response [201]&gt;</msg>
+<status status="PASS" starttime="20231123 05:32:43.228" endtime="20231123 05:32:44.326"/>
+</kw>
+<msg timestamp="20231123 05:32:44.326" level="INFO">${RESPONSE} = &lt;Response [201]&gt;</msg>
+<status status="PASS" starttime="20231123 05:32:43.227" endtime="20231123 05:32:44.326"/>
+</kw>
+<kw name="Set Test Variable" library="BuiltIn">
+<arg>${RESPONSE_VAR}</arg>
+<arg>${RESPONSE}</arg>
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<msg timestamp="20231123 05:32:44.329" level="INFO">${RESPONSE_VAR} = &lt;Response [201]&gt;</msg>
+<status status="PASS" starttime="20231123 05:32:44.326" endtime="20231123 05:32:44.329"/>
+</kw>
+<status status="PASS" starttime="20231123 05:32:43.224" endtime="20231123 05:32:44.329"/>
+</kw>
+<kw name="Then The Status Code Should Be 201" library="resource_users" sourcename="The Status Code Should Be ${CODE_EXPECTED}">
+<kw name="Verify Status Code" library="API_requests">
+<arg>${RESPONSE_VAR}</arg>
+<arg>${CODE_EXPECTED}</arg>
+<kw name="Should Be Equal As Numbers" library="BuiltIn">
+<arg>${response.status_code}</arg>
+<arg>${expected_status}</arg>
+<doc>Fails if objects are unequal after converting them to real numbers.</doc>
+<msg timestamp="20231123 05:32:44.332" level="INFO">Argument types are:
+&lt;class 'int'&gt;
+&lt;class 'str'&gt;</msg>
+<status status="PASS" starttime="20231123 05:32:44.331" endtime="20231123 05:32:44.333"/>
+</kw>
+<status status="PASS" starttime="20231123 05:32:44.330" endtime="20231123 05:32:44.333"/>
+</kw>
+<status status="PASS" starttime="20231123 05:32:44.329" endtime="20231123 05:32:44.333"/>
+</kw>
+<kw name="And The Response Contains ${INTEGER_NAME} And ${JOB} Data" library="resource_users" sourcename="The Response Contains ${NAME_R} And ${JOB_R} Data">
+<kw name="Get From Dictionary" library="Collections">
+<var>${NAME_R}</var>
+<arg>${RESPONSE_VAR.json()}</arg>
+<arg>name</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<msg timestamp="20231123 05:32:44.335" level="INFO">${NAME_R} = 1</msg>
+<status status="PASS" starttime="20231123 05:32:44.334" endtime="20231123 05:32:44.336"/>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<arg>${NAME_R}</arg>
+<arg>${NAME_REQ}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" starttime="20231123 05:32:44.336" endtime="20231123 05:32:44.336"/>
+</kw>
+<kw name="Get From Dictionary" library="Collections">
+<var>${JOB_R}</var>
+<arg>${RESPONSE_VAR.json()}</arg>
+<arg>job</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<msg timestamp="20231123 05:32:44.338" level="INFO">${JOB_R} = Ingeniero</msg>
+<status status="PASS" starttime="20231123 05:32:44.336" endtime="20231123 05:32:44.338"/>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<arg>${JOB_R}</arg>
+<arg>${JOB}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" starttime="20231123 05:32:44.338" endtime="20231123 05:32:44.338"/>
+</kw>
+<status status="PASS" starttime="20231123 05:32:44.333" endtime="20231123 05:32:44.338"/>
+</kw>
+<kw name="And The Id Must Be A Positive Integer" library="resource_users">
+<kw name="Get From Dictionary" library="Collections">
+<var>${ID}</var>
+<arg>${RESPONSE_VAR.json()}</arg>
+<arg>id</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<msg timestamp="20231123 05:32:44.340" level="INFO">${ID} = 354</msg>
+<status status="PASS" starttime="20231123 05:32:44.339" endtime="20231123 05:32:44.340"/>
+</kw>
+<kw name="Should Be True" library="BuiltIn">
+<arg>${ID} &gt; 0</arg>
+<doc>Fails if the given condition is not true.</doc>
+<status status="PASS" starttime="20231123 05:32:44.340" endtime="20231123 05:32:44.341"/>
+</kw>
+<status status="PASS" starttime="20231123 05:32:44.339" endtime="20231123 05:32:44.341"/>
+</kw>
+<status status="PASS" starttime="20231123 05:32:43.222" endtime="20231123 05:32:44.341"/>
+</test>
+<test id="s1-s1-t5" name="Not Create User When A Parameter Contains Special Character String" line="39">
+<kw name="Given The API Is Available" library="resource_users">
+<kw name="Log To Console" library="BuiltIn">
+<arg>Start the request</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20231123 05:32:44.342" endtime="20231123 05:32:44.342"/>
+</kw>
+<status status="PASS" starttime="20231123 05:32:44.341" endtime="20231123 05:32:44.342"/>
+</kw>
+<kw name="When A POST Request Is Sent To ${BASE_URL}, ${USERS_ENDPOINT} With ${SPECIAL_NAME}, ${JOB} Data" library="resource_users" sourcename="A POST Request Is Sent To ${BASE_URL}, ${USERS_ENDPOINT} With ${NAME}, ${JOB} Data">
+<kw name="Set Test Variable" library="BuiltIn">
+<arg>${NAME_REQ}</arg>
+<arg>${NAME}</arg>
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<msg timestamp="20231123 05:32:44.344" level="INFO">${NAME_REQ} = 1-</msg>
+<status status="PASS" starttime="20231123 05:32:44.343" endtime="20231123 05:32:44.344"/>
+</kw>
+<kw name="Post Request With Json" library="API_requests">
+<var>${RESPONSE}</var>
+<arg>${BASE_URL}</arg>
+<arg>${USERS_ENDPOINT}</arg>
+<arg>${NAME}</arg>
+<arg>${JOB}</arg>
+<kw name="Create Dictionary" library="BuiltIn">
+<var>${BODY}</var>
+<arg>name=${NAME}</arg>
+<arg>job=${JOB}</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<msg timestamp="20231123 05:32:44.344" level="INFO">${BODY} = {'name': '1-', 'job': 'Ingeniero'}</msg>
+<status status="PASS" starttime="20231123 05:32:44.344" endtime="20231123 05:32:44.345"/>
+</kw>
+<kw name="POST" library="RequestsLibrary">
+<var>${RESPONSE}</var>
+<arg>${URL}${ENDPOINT}</arg>
+<arg>json=${BODY}</arg>
+<doc>Sends a POST request.</doc>
+<msg timestamp="20231123 05:32:44.810" level="INFO">POST Request : url=https://reqres.in/api/users 
+ path_url=/api/users 
+ headers={'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '34', 'Content-Type': 'application/json'} 
+ body=b'{"name": "1-", "job": "Ingeniero"}' 
+ </msg>
+<msg timestamp="20231123 05:32:44.810" level="INFO">POST Response : url=https://reqres.in/api/users 
+ status=201, reason=Created 
+ headers={'Date': 'Thu, 23 Nov 2023 10:32:44 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '81', 'Connection': 'keep-alive', 'Report-To': '{"group":"heroku-nel","max_age":3600,"endpoints":[{"url":"https://nel.heroku.com/reports?ts=1700735564&amp;sid=c4c9725f-1ab0-44d8-820f-430df2718e11&amp;s=dX5P4H%2Bwsk%2F%2Fxs6X0dUsFKjqWNTsprzfgb%2BBHY7KN3c%3D"}]}', 'Reporting-Endpoints': 'heroku-nel=https://nel.heroku.com/reports?ts=1700735564&amp;sid=c4c9725f-1ab0-44d8-820f-430df2718e11&amp;s=dX5P4H%2Bwsk%2F%2Fxs6X0dUsFKjqWNTsprzfgb%2BBHY7KN3c%3D', 'Nel': '{"report_to":"heroku-nel","max_age":3600,"success_fraction":0.005,"failure_fraction":0.05,"response_headers":["Via"]}', 'X-Powered-By': 'Express', 'Access-Control-Allow-Origin': '*', 'Etag': 'W/"51-ZqTbaKfCuuES16WnvzWpRWF8LZg"', 'Via': '1.1 vegur', 'CF-Cache-Status': 'DYNAMIC', 'Server': 'cloudflare', 'CF-RAY': '82a8bffe9cde098e-MIA'} 
+ body={"name":"1-","job":"Ingeniero","id":"587","createdAt":"2023-11-23T10:32:44.758Z"} 
+ </msg>
+<msg timestamp="20231123 05:32:44.812" level="INFO">${RESPONSE} = &lt;Response [201]&gt;</msg>
+<status status="PASS" starttime="20231123 05:32:44.345" endtime="20231123 05:32:44.812"/>
+</kw>
+<msg timestamp="20231123 05:32:44.813" level="INFO">${RESPONSE} = &lt;Response [201]&gt;</msg>
+<status status="PASS" starttime="20231123 05:32:44.344" endtime="20231123 05:32:44.813"/>
+</kw>
+<kw name="Set Test Variable" library="BuiltIn">
+<arg>${RESPONSE_VAR}</arg>
+<arg>${RESPONSE}</arg>
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<msg timestamp="20231123 05:32:44.815" level="INFO">${RESPONSE_VAR} = &lt;Response [201]&gt;</msg>
+<status status="PASS" starttime="20231123 05:32:44.813" endtime="20231123 05:32:44.815"/>
+</kw>
+<status status="PASS" starttime="20231123 05:32:44.343" endtime="20231123 05:32:44.816"/>
+</kw>
+<kw name="Then The Status Code Should Be 400" library="resource_users" sourcename="The Status Code Should Be ${CODE_EXPECTED}">
+<kw name="Verify Status Code" library="API_requests">
+<arg>${RESPONSE_VAR}</arg>
+<arg>${CODE_EXPECTED}</arg>
+<kw name="Should Be Equal As Numbers" library="BuiltIn">
+<arg>${response.status_code}</arg>
+<arg>${expected_status}</arg>
+<doc>Fails if objects are unequal after converting them to real numbers.</doc>
+<msg timestamp="20231123 05:32:44.819" level="INFO">Argument types are:
+&lt;class 'int'&gt;
+&lt;class 'str'&gt;</msg>
+<msg timestamp="20231123 05:32:44.819" level="FAIL">201.0 != 400.0</msg>
+<status status="FAIL" starttime="20231123 05:32:44.817" endtime="20231123 05:32:44.819"/>
+</kw>
+<status status="FAIL" starttime="20231123 05:32:44.817" endtime="20231123 05:32:44.819"/>
+</kw>
+<status status="FAIL" starttime="20231123 05:32:44.816" endtime="20231123 05:32:44.820"/>
+</kw>
+<kw name="And The Response Contains The message ${MESSAGE_RESPONSE}" library="resource_users" sourcename="The Response Contains The Message ${MESSAGE_RESPONSE}">
+<status status="NOT RUN" starttime="20231123 05:32:44.820" endtime="20231123 05:32:44.820"/>
+</kw>
+<status status="FAIL" starttime="20231123 05:32:44.341" endtime="20231123 05:32:44.821">201.0 != 400.0</status>
+</test>
+<status status="FAIL" starttime="20231123 05:32:41.373" endtime="20231123 05:32:44.822"/>
 </suite>
-<status status="PASS" starttime="20231123 05:00:30.487" endtime="20231123 05:00:32.372"/>
+<status status="FAIL" starttime="20231123 05:32:41.358" endtime="20231123 05:32:44.824"/>
 </suite>
 <statistics>
 <total>
-<stat pass="3" fail="0" skip="0">All Tests</stat>
+<stat pass="4" fail="1" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="3" fail="0" skip="0" id="s1" name="Tests">Tests</stat>
-<stat pass="3" fail="0" skip="0" id="s1-s1" name="Users">Tests.Users</stat>
+<stat pass="4" fail="1" skip="0" id="s1" name="Tests">Tests</stat>
+<stat pass="4" fail="1" skip="0" id="s1-s1" name="Users">Tests.Users</stat>
 </suite>
 </statistics>
 <errors>

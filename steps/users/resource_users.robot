@@ -29,6 +29,10 @@ The Response Contains ${JOB-R} Data
     ${JOB_R}=  Get From Dictionary       ${RESPONSE_VAR.json()}      job
     BuiltIn.Should Be Equal As Strings      ${JOB_R}        ${JOB}
 
+The Response Contains The Message ${MESSAGE_RESPONSE}
+    ${MESSAGE_RESPONSE_R}=  Get Text        ${RESPONSE_VAR}     xpath=//pre
+    BuiltIn.Should Be Equal As Strings      ${MESSAGE_RESPONSE_R}       ${MESSAGE_RESPONSE}
+
 The Id Must Be A Positive Integer
     ${ID}=  Get From Dictionary     ${RESPONSE_VAR.json()}     id
     #Should Be Integer       ${ID}

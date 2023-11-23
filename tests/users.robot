@@ -28,8 +28,25 @@ Create User Without Required Parameter
     And The Response Contains ${JOB} Data
     And The Id Must Be A Positive Integer
 
+Create User With Integer Name
+    Given The API Is Available
+    When A POST Request Is Sent To ${BASE_URL}, ${USERS_ENDPOINT} With ${INTEGER_NAME}, ${JOB} Data
+    Then The Status Code Should Be 201
+    And The Response Contains ${INTEGER_NAME} And ${JOB} Data
+    And The Id Must Be A Positive Integer
+
+
+Not Create User When A Parameter Contains Special Character String
+    Given The API Is Available
+    When A POST Request Is Sent To ${BASE_URL}, ${USERS_ENDPOINT} With ${SPECIAL_NAME}, ${JOB} Data
+    Then The Status Code Should Be 400
+    And The Response Contains The message ${MESSAGE_RESPONSE}
+
 *** Variables ***
+${SPECIAL_NAME}     1-
 ${EMPTY_NAME}       Null
+${INTEGER_NAME}     1
+${MESSAGE_RESPONSE}     Bad Request
 ${NAME}     Ivan
 ${JOB}      Ingeniero
 ${USERS_ENDPOINT}   /users
